@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>index</title>
+
+	<style>
+	* {margin:0;padding:0;}
+	.section {}
+	.section input[id*="slide"] {display:none;}
+
+	.section .slide-wrap {max-width:100%;margin:0 auto;}
+	.section .slidelist {white-space:nowrap;font-size:0;overflow:hidden;}
+	.section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .8s;}
+	.section .slidelist > li > a {display:block;position:relative;}
+	.section .slidelist > li > a img {width:100%;}
+	.section .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+	.section .slidelist .left {left:10px;background:url('./img/left.png') center center / 50% no-repeat;}
+	.section .slidelist .right {right:10px;background:url('./img/right.png') center center / 50% no-repeat;}
+		
+	.section .slidelist .textbox {position:absolute;z-index:1;top:85%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
+	
+	.section .slidelist .textbox p {font-size:18px;color:#fff;opacity:0;transform:translateY(30px);transition:all .5s;}
+
+	.section input[id="slide01"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(0%);}
+	.section input[id="slide02"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-100%);}
+	.section input[id="slide03"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-200%);}
+	.section input[id="slide04"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-300%);}
+	.section input[id="slide05"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-400%);}
+	.section input[id="slide06"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-500%);}
+	.section input[id="slide07"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-600%);}
+	.section input[id="slide08"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-700%);}
+	.section input[id="slide09"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-800%);}
+	.section input[id="slide10"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-900%);}
+	.section input[id="slide11"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-1000%);}
+	.section input[id="slide12"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-1100%);}
+	.section input[id="slide13"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-1200%);}
+	
+		
+		.section input[id="slide01"]:checked ~ .slide-wrap li:nth-child(1) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide04"]:checked ~ .slide-wrap li:nth-child(4) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide05"]:checked ~ .slide-wrap li:nth-child(5) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide06"]:checked ~ .slide-wrap li:nth-child(6) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide07"]:checked ~ .slide-wrap li:nth-child(7) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide08"]:checked ~ .slide-wrap li:nth-child(8) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide09"]:checked ~ .slide-wrap li:nth-child(9) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide10"]:checked ~ .slide-wrap li:nth-child(10) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide11"]:checked ~ .slide-wrap li:nth-child(11) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide12"]:checked ~ .slide-wrap li:nth-child(12) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide13"]:checked ~ .slide-wrap li:nth-child(13) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+
+		
+	</style>
+</head>
+<body>
+
+<div class="section">
+	<input type="radio" name="slide" id="slide01" checked>
+	<input type="radio" name="slide" id="slide02">
+	<input type="radio" name="slide" id="slide03">
+	<input type="radio" name="slide" id="slide04">
+	<input type="radio" name="slide" id="slide05">
+	<input type="radio" name="slide" id="slide06">
+	<input type="radio" name="slide" id="slide07">
+	<input type="radio" name="slide" id="slide08">
+	<input type="radio" name="slide" id="slide09">
+	<input type="radio" name="slide" id="slide10">
+	<input type="radio" name="slide" id="slide11">
+	<input type="radio" name="slide" id="slide12">
+	<input type="radio" name="slide" id="slide13">
+
+
+	<div class="slide-wrap">
+		<ul class="slidelist">
+			<li>
+				<a>
+					<div class="textbox">
+					</div>
+					<img src="./img/1.png">
+					<label for="slide02" class="right"></label>
+				</a>
+			</li>
+			<li>
+				<a>
+					<label for="slide01" class="left"></label>
+					<div class="textbox">
+						<p>오늘은 비가 오지않는 아주 화창한 날씨입니다.</p>
+					</div>
+					<img src="./img/2.png">
+					<label for="slide03" class="right"></label>
+				</a>
+			</li>
+			<li>
+				<a>
+					<label for="slide02" class="left"></label>
+					<div class="textbox">
+						<p>지금 보이는 사진 처럼<br>
+						우리가 사는 별은 아주 오래전 모든 색을 잃었어요.</p>
+					</div>
+					<img src="./img/3.png">
+					<label for="slide04" class="right"></label>
+				</a>
+			<li>
+				<a>
+					<label for="slide03" class="left"></label>
+					<div class="textbox">
+						<p>색을 잃기 전의 세상에서는</br>
+					향기로운 꽃의 색도 알록달록 했고,</p>
+					</div>
+					<img src="./img/4.png">
+					<label for="slide05" class="right"></label>
+				</a>
+			</li>
+			<li>
+				<a>
+					<label for="slide04" class="left"></label>
+					<div class="textbox">
+						<p>사람들의 머리색도 다양하고,</p>
+					</div>
+					<img src="./img/5.png">
+					<label for="slide06" class="right"></label>
+				</a>
+			</li>			
+			<li>
+				<a>
+					<label for="slide05" class="left"></label>
+					<div class="textbox">
+						<p>동물들도 저마다 다른 색이었다고 하네요.</p>
+					</div>
+					<img src="./img/6.png">
+					<label for="slide07" class="right"></label>
+				</a>
+			</li>			
+			<li>
+				<a>
+					<label for="slide06" class="left"></label>
+					<div class="textbox">
+						<p>지금은 과거와 달리 색을 부르는 단어를 쓰지 않아요.<br>
+						어차피 구분하지 못하니 단어들이 쓸모없어졌거든요.</p>
+					</div>
+					<img src="./img/7.png">
+					<label for="slide08" class="right"></label>
+				</a>
+			</li>			
+			<li>
+				<a>
+					<label for="slide07" class="left"></label>
+					<div class="textbox">
+						<p>그래서 저와 같이 놀아주는 길고양이도 원래는 무슨 색인지 몰라요.</p>
+					</div>
+					<img src="./img/8.png">
+					<label for="slide09" class="right"></label>
+				</a>
+			</li>
+			<li>
+				<a>
+					<label for="slide08" class="left"></label>
+					<div class="textbox">
+						<p>저는 얼마 전 도서관에서 오래된 동화책을 발견했어요.</p>
+					</div>
+					<img src="./img/9.png">
+					<label for="slide10" class="right"></label>
+				</a>
+			</li>			
+			<li>
+				<a>
+					<label for="slide09" class="left"></label>
+					<div class="textbox">
+						<p>잠잘 때 꿈을 꾸는 사람들이 점점 줄어들면서 색들도 함께 사라졌다는 내용죠.</p>
+					</div>
+					<img src="./img/10.png">
+					<label for="slide11" class="right"></label>
+				</a>
+			</li>			
+			<li>
+				<a>
+					<label for="slide10" class="left"></label>
+					<div class="textbox">
+						<p>그래서 매일 밤, 잠들기 전에 꿈 꾸고 싶은 내용을 적은 쪽지를<br>
+							베개 아래에 두고 잠을 자는 것이 일상이 되었어요.</p>
+					</div>
+					<img src="./img/11.png">
+					<label for="slide12" class="right"></label>
+				</a>
+			</li>			
+			<li>
+				<a>
+					<label for="slide11" class="left"></label>
+					<div class="textbox">
+						<p>골동품 가게에서 산 물감은<br>
+							보관한지 오래되어 무슨 색인지 적혀있지도 않지만<br>
+						언젠가 꿈을 꾸게 된다면 무슨 색인지 알 수 있을 거예요.</p>
+					</div>
+					<img src="./img/12.png">
+					<label for="slide13" class="right"></label>
+				</a>
+			</li>
+			<li>
+				<a>
+					<label for="slide12" class="left"></label>
+					<div class="textbox">
+						<p>언젠가 꿈을 꿀 수 있길 바라며<br>
+						- 764번지 꿈에서 보내 편지 -</p>
+					</div>
+					<img src="./img/13.png">
+				</a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+</div>
+
+
+</body>
+</html>
